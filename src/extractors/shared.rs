@@ -120,9 +120,10 @@ pub async fn extract_and_refresh_session(
 
                 // Calculate new expiration time — if both are absent, leave the
                 // existing value untouched so the session keeps whatever expiry it had
-                if let Some(new_expires) =
-                    calculate_token_expiration(refresh_response.expires_in, config.token_max_age_seconds)
-                {
+                if let Some(new_expires) = calculate_token_expiration(
+                    refresh_response.expires_in,
+                    config.token_max_age_seconds,
+                ) {
                     session.expires = Some(new_expires);
                 }
 
