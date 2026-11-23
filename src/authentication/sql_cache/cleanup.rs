@@ -274,13 +274,13 @@ mod tests {
 
     #[test]
     fn cleanup_batch_size_is_positive() {
-        assert!(CLEANUP_BATCH_SIZE > 0);
+        const { assert!(CLEANUP_BATCH_SIZE > 0) };
     }
 
     #[test]
     fn cleanup_batch_size_is_reasonable() {
         // Ensure the constant stays in a sane range (1 – 10 000).
-        assert!(CLEANUP_BATCH_SIZE <= 10_000);
+        const { assert!(CLEANUP_BATCH_SIZE <= 10_000) };
     }
 
     /// Verify that a `CancellationToken` can be cancelled without blocking.
