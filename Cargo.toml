@@ -4,9 +4,6 @@ version = "0.7.0"
 edition = "2024"
 license = "MIT"
 description = "OpenID Connect (OIDC) and OAuth2 client middleware for Axum web framework"
-documentation = "https://docs.rs/axum-oidc-client"
-homepage = "https://github.com/RedSoftwareSystems/axum-oidc-client"
-repository = "https://github.com/RedSoftwareSystems/axum-oidc-client"
 
 [dependencies]
 tokio = { version = "1.52" }
